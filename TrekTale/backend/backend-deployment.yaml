@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trektale-backend
+  labels:
+    app: trektale-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trektale-backend
+  template:
+    metadata:
+      labels:
+        app: trektale-backend
+    spec:
+      containers:
+        - name: trektale-backend
+          image: akash5468/trektale-backend:v1.1
+          ports:
+            - containerPort: 8000
+          envFrom:
+          - configMapRef:
+              name: trektale-config
+

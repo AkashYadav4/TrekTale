@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trektale-frontend
+  labels:
+    app: trektale-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trektale-frontend
+  template:
+    metadata:
+      labels:
+        app: trektale-frontend
+    spec:
+      containers:
+        - name: trektale-frontend
+          image: akash5468/trektale-frontend:v1.1
+          ports:
+            - containerPort: 80
