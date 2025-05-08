@@ -32,7 +32,7 @@ const Login = () => {
         email: email,
         password: password,
       });
-
+    console.log("akash: ", response)
       // Handle successful login response
       if (response.data && response.data.accessToken) {
         localStorage.setItem("token", response.data.accessToken);

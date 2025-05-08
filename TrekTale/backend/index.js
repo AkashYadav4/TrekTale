@@ -368,5 +368,7 @@ app.get("/travel-stories/filter", authenticateToken, async (req, res) => {
   }
 });
 
-app.listen(8000);
+app.listen(8000, '0.0.0.0', () => {
+  console.log("Backend is running on port 8000");
+});
 module.exports = app;
