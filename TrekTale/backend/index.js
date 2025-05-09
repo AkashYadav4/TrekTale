@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const config = require("./config.json");
+// const config = require("./config.json");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const express = require("express");
@@ -15,7 +15,8 @@ const { authenticateToken } = require("./utilities");
 const User = require("./models/user.model");
 const TravelStory = require("./models/travelStory.model");
 
-mongoose.connect(config.connectionString);
+// mongoose.connect(config.connectionString);
+mongoose.connect(process.env.MONGO_URI);
 
 const app = express();
 app.use(express.json());
@@ -128,7 +129,7 @@ app.post("/image-upload", upload.single("image"), async (req, res) => {
         .json({ error: true, message: "No image uploaded" });
     }
 
-    const imageUrl = `http://localhost:8000/uploads/${req.file.filename}`;
+    const imageUrl = `http://34.10.82.81:8000/uploads/${req.file.filename}`;
 
     res.status(200).json({ imageUrl });
   } catch (error) {
@@ -242,7 +243,7 @@ app.put("/edit-story/:id", authenticateToken, async (req, res) => {
         .json({ error: true, message: "Travel story not found" });
     }
 
-    const placeholderImgUrl = `http://localhost:8000/assets/placeholder.png`;
+    const placeholderImgUrl = `http://34.10.82.81:8000/assets/placeholder.png`;
 
     travelStory.title = title;
     travelStory.story = story;

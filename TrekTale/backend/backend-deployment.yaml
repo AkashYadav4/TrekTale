@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: trektale-backend
-          image: akash5468/trektale-backend:v1.1
+          image: akash5468/trektale-backend:v1.6
           ports:
             - containerPort: 8000
           envFrom:
