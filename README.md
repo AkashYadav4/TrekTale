@@ -3,7 +3,7 @@
 
 **Share Your Journey, Inspire the World**
 
-TrekTale is a cloud-powered, full-stack travel story platform that allows users to document and share their personal journeys with images, descriptions, and geotags. It is built using modern web technologies and deployed on Google Cloud Platform using Docker and GKE.
+TrekTale is a cloud-powered, full-stack travel story platform that allows users to document and share their personal journeys with images, descriptions, and geotags. It is built using the MERN Stack and deployed on Google Cloud Platform using Docker and GKE.
 
 ---
 
