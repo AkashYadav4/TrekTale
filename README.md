@@ -87,7 +87,7 @@ TrekTale/
 ### Steps
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/TrekTale.git && cd TrekTale
+git clone https://github.com/AkashYadav4/TrekTale.git && cd TrekTale
 
 # Add .env to backend/
 MONGO_URI=your-mongodb-uri
@@ -161,8 +161,8 @@ kubectl apply -f k8s/frontend-service.yaml
 ## 🙌 Author
 
 **Akash Kumar Yadav**  
-📍 Fordham University, Lincoln Center  
-✉️ akash.yadav@fordham.edu
+📍 Fordham University, New York  
+✉️ akashkinu3@fordham.edu
 
 ---
 
